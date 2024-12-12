@@ -1,0 +1,216 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.btn-edit, .btn-delete, .btn-back, .btn-cancel {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 2px;
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+}
+
+.btn-edit {
+    background-color: #2196F3;
+}
+
+.btn-delete {
+    background-color: #f44336;
+}
+
+.btn-back, .btn-cancel {
+    background-color: #555;
+}
+
+.btn-edit:hover, .btn-delete:hover, .btn-back:hover, .btn-cancel:hover {
+    opacity: 0.8;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Styling cho Alert */
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    z-index: 1000;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.alert-success {
+    background-color: #4CAF50;
+    border-left: 5px solid #45a049;
+}
+
+.alert-error {
+    background-color: #f44336;
+    border-left: 5px solid #da3c31;
+}
+
+.alert-warning {
+    background-color: #ff9800;
+    border-left: 5px solid #ed8c00;
+}
+
+.alert-info {
+    background-color: #2196F3;
+    border-left: 5px solid #1976D2;
+}
+
+/* Animation khi alert biến mất */
+.alert.fade-out {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* Styling cho nút đóng alert */
+.alert .close-btn {
+    float: right;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 15px;
+}
+
+.alert .close-btn:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Styling cho icon trong alert */
+.alert::before {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.alert-success::before {
+    content: '✓';
+}
+
+.alert-error::before {
+    content: '✕';
+}
+
+.alert-warning::before {
+    content: '!';
+}
+
+.alert-info::before {
+    content: 'i';
+}
+
+/* Responsive styling cho alert */
+@media screen and (max-width: 600px) {
+    .alert {
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10px;
+    }
+}
